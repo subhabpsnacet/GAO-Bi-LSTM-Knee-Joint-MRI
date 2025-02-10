@@ -9,7 +9,7 @@ Here, I have provided detailed usage guidelines to ensure that interested reader
 Dataset Guidelines
 
 •	Dataset Access:
-Datas are collected from  Zenodo dataset for ACL-Knee joint MRI dataset (DOI: https://zenodo.org/records/7977297). The source code and additional dataset used in this study are publicly available on GitHub: Source code: https://github.com/subhabpsnacet/code Dataset: https://github.com/subhabpsnacet/Knee-joint-MRI. It consists of 16,526 MRI images organized into two folders: 'Training' (13,220 images) and 'Testing' (3,306 images)."
+Datas are collected from  Zenodo dataset for ACL-Knee joint MRI dataset (DOI: https://zenodo.org/records/7977297). The source code and additional dataset used in this study are publicly available on GitHub: https://github.com/subhabpsnacet/GAO-Bi-LSTM-Knee-Joint-MRI. It consists of 16,526 MRI images organized into two folders: 'Training' (13,220 images) and 'Testing' (3,306 images)."
 
 •	Data Structure:
 "Each image is labeled with its corresponding OA grade (e.g., Grade 0, 1, 2, 3, or 4). Images are stored in .jpg format with the associated labels provided in a labels.csv file."
