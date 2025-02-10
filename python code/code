@@ -1,1 +1,117 @@
+Python code for classifying knee joint ACL-MRI images using GAO-Bi-LSTM
+
+import numpy as np
+import cv2
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout, LSTM, Bidirectional, TimeDistributed
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score
+import os
+# Data Preprocessing
+def load_images(data_path):
+    images = []
+    labels = []
+    for label in os.listdir(data_path):
+        for img_path in glob(os.path.join(data_path, label, '*.png')):
+            img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+            img = cv2.resize(img, (128, 128))
+            img = cv2.equalizeHist(img)  # Adaptive Local Histogram Equalization
+            images.append(img)
+            labels.append(int(label))
+    return np.array(images).reshape(-1, 128, 128, 1), np.array(labels)
+# Gaussian Aquila Optimizer (GAO) - Placeholder Implementation
+def gaussian_aquila_optimizer(model, X, y, epochs=20, batch_size=32):
+    # This is a placeholder function for GAO optimization.
+    # Actual GAO implementation should be added here.
+    model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+    model.fit(X, y, epochs=epochs, batch_size=batch_size, validation_split=0.2)
+    return model
+# n-CNN Model
+def create_n_cnn(input_shape):
+    	model = Sequential([
+        	Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),
+        	MaxPooling2D(pool_size=(2, 2)),
+        	Conv2D(64, (3, 3), activation='relu'),
+        	MaxPooling2D(pool_size=(2, 2)),
+        	Flatten(),
+        	Dense(128, activation='relu'),
+        	Dropout(0.5),
+        	Dense(4, activation='softmax')
+    ])
+    return model
+# LSTM Model
+def create_lstm(input_shape):
+    model = Sequential([
+        TimeDistributed(Conv2D(32, (3, 3), activation='relu'), input_shape=input_shape),
+        TimeDistributed(MaxPooling2D(pool_size=(2, 2))),
+        TimeDistributed(Flatten()),
+        LSTM(64, return_sequences=True),
+        LSTM(32),
+        Dense(128, activation='relu'),
+        Dropout(0.5),
+        Dense(4, activation='softmax')
+    ])
+    return model
+# Bi-LSTM Model
+def create_bi_lstm(input_shape):
+    model = Sequential([
+        TimeDistributed(Conv2D(32, (3, 3), activation='relu'), input_shape=input_shape),
+        TimeDistributed(MaxPooling2D(pool_size=(2, 2))),
+        TimeDistributed(Flatten()),
+        Bidirectional(LSTM(64, return_sequences=True)),
+        Bidirectional(LSTM(32)),
+        Dense(128, activation='relu'),
+        Dropout(0.5),
+        Dense(4, activation='softmax')
+    ])
+    return model
+# GAO-LSTM Model
+def create_gao_lstm(input_shape):
+    model = Sequential([
+        TimeDistributed(Conv2D(32, (3, 3), activation='relu'), input_shape=input_shape),
+        TimeDistributed(MaxPooling2D(pool_size=(2, 2))),
+        TimeDistributed(Flatten()),
+        LSTM(64, return_sequences=True),
+        LSTM(32),
+        Dense(128, activation='relu'),
+        Dropout(0.5),
+        Dense(4, activation='softmax')
+    ])
+    model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+    return model
+# GAO-Bi-LSTM Model
+def create_gao_bi_lstm(input_shape):
+    model = Sequential([
+        TimeDistributed(Conv2D(32, (3, 3), activation='relu'), input_shape=input_shape),
+        TimeDistributed(MaxPooling2D(pool_size=(2, 2))),
+        TimeDistributed(Flatten()),
+        Bidirectional(LSTM(64, return_sequences=True)),
+        Bidirectional(LSTM(32)),
+        Dense(128, activation='relu'),
+        Dropout(0.5),
+        Dense(4, activation='softmax')
+    ])
+    model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+    return model
+# Compile and Train
+data_path = "path/to/mri_data"
+X, y = load_images(data_path)
+y = tf.keras.utils.to_categorical(y, num_classes=4)
+# Choose model
+model = create_gao_bi_lstm((128, 128, 1))  # Change function for different models
+model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+model.fit(X, y, epochs=20, batch_size=32, validation_split=0.2)
+# Evaluation
+def evaluate_model(model, X_test, y_test):
+   	 y_pred = model.predict(X_test)
+    	y_pred_classes = np.argmax(y_pred, axis=1)
+    	y_true_classes = np.argmax(y_test, axis=1)
+    	accuracy = accuracy_score(y_true_classes, y_pred_classes)
+    	precision = precision_score(y_true_classes, y_pred_classes, average='weighted')
+    	recall = recall_score(y_true_classes, y_pred_classes, average='weighted')
+    	roc_auc = roc_auc_score(y_test, y_pred, multi_class='ovr')
+print(f"Accuracy: {accuracy:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}, ROC AUC: {roc_auc:.4f}")
+   	return accuracy, precision, recall, roc_auc
 
