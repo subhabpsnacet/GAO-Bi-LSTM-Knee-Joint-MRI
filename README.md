@@ -71,11 +71,8 @@ The dataset and source code are publicly available for replication and validatio
 
 **5. Results and Performance**
    
-Model	Accuracy	Sensitivity	Specificity
-LSTM	98.40%	98.19%	97.60%
-Bi-LSTM	97.56%	97.00%	96.69%
-GAO-LSTM	98.87%	98.64%	98.59%
-GAO-Bi-LSTM	99.69%	99.47%	99.35%
+![image](https://github.com/user-attachments/assets/1d1194d1-d068-45a9-9fce-a6e3cfff1381)
+
 Visual Results
 Segmentation Example:
 
