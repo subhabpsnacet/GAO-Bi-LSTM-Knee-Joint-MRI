@@ -44,15 +44,17 @@ The dataset and source code are publicly available for replication and validatio
     
 ***Training the GAO-Bi-LSTM Model**
 
-  python train.py --epochs 30 --batch_size 24
+      python train.py --epochs 30 --batch_size 24
+      
   
-  This trains the GAO-Bi-LSTM model using the optimized dataset.
+      This trains the GAO-Bi-LSTM model using the optimized dataset.
   
 **Testing and Evaluating the Model**
 
-  python test.py --model checkpoint/GAO_Bi_LSTM.h5 --data processed_data/test
+      python test.py --model checkpoint/GAO_Bi_LSTM.h5 --data processed_data/test
+      
   
-  This generates accuracy, sensitivity, and specificity reports.
+      This generates accuracy, sensitivity, and specificity reports.
 
 **Dataset Information****
 
