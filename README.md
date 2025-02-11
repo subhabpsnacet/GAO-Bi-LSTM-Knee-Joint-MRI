@@ -58,8 +58,17 @@ The dataset and source code are publicly available for replication and validatio
 
 # **4.**Dataset Information****
 
-    *****Source:Zenodo ACL-Knee Joint MRI Dataset
-    **Additional Dataset:** Available at GitHub**
+    Downlaod datasets using the below link and put them into the "data folder":
+
+https://drive.google.com/drive/folders/1PHosWF-ale2zztag9mlxm2Y1Wryk3pHQ?usp=drive_link
+    
+   Dataset Guidelines
+
+•	Dataset Access:
+Datas are collected from  Zenodo dataset for ACL-Knee joint MRI dataset (DOI: https://zenodo.org/records/7977297). The source code and additional dataset used in this study are publicly available on GitHub: https://github.com/subhabpsnacet/GAO-Bi-LSTM-Knee-Joint-MRI. 
+
+•	Data Structure:
+"Each image is labeled with its corresponding OA grade (e.g., Grade 0, 1, 2, 3, or 4). Images are stored in .jpg format with the associated labels provided in a labels.csv file."
 
     **Description:**
 
@@ -73,8 +82,8 @@ The dataset and source code are publicly available for replication and validatio
    
 ![image](https://github.com/user-attachments/assets/1d1194d1-d068-45a9-9fce-a6e3cfff1381)
 
-# **6**Visual Results**
-# **Segmentation output:***
+# **6.**Visual Results**
+# **Segmentation output:**
 
 ![image](https://github.com/user-attachments/assets/94b9b463-95d8-428f-af76-8db4a75cff29)
 
@@ -104,21 +113,10 @@ If you use this repository, please cite:
     Enhancing interpretability via attention-based deep learning mechanisms.
 
 
-# GAO-Bi-LSTM-Knee-Joint-MRI
-This study introduces a Gaussian Aquila Optimizer (GAO)-enhanced Bidirectional Long Short-Term Memory (Bi-LSTM) network to identify and categorize OA in anterior cruciate ligament (ACL) images from knee MRI.  
 
-Downlaod datasets using the below link and put them into the "data folder":
 
-https://drive.google.com/drive/folders/1PHosWF-ale2zztag9mlxm2Y1Wryk3pHQ?usp=drive_link
-Here, I have provided detailed usage guidelines to ensure that interested readers can replicate the experimental results and evaluate the metrics smoothly:
 
-Dataset Guidelines
 
-•	Dataset Access:
-Datas are collected from  Zenodo dataset for ACL-Knee joint MRI dataset (DOI: https://zenodo.org/records/7977297). The source code and additional dataset used in this study are publicly available on GitHub: https://github.com/subhabpsnacet/GAO-Bi-LSTM-Knee-Joint-MRI. It consists of 16,526 MRI images organized into two folders: 'Training' (13,220 images) and 'Testing' (3,306 images)."
-
-•	Data Structure:
-"Each image is labeled with its corresponding OA grade (e.g., Grade 0, 1, 2, 3, or 4). Images are stored in .jpg format with the associated labels provided in a labels.csv file."
 
 Preprocessing Guidelines
 •	Preprocessing Steps:
