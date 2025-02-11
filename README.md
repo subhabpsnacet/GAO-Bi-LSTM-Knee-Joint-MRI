@@ -34,7 +34,7 @@ The dataset and source code are publicly available for replication and validatio
       OpenCV (for image preprocessing)
       Scikit-learn (for evaluation metrics)
 
-# **3**.**Usage Guide****
+# **3**.**Usage Guide**
 
   **Running the Preprocessing Pipeline**
   
@@ -73,12 +73,12 @@ The dataset and source code are publicly available for replication and validatio
    
 ![image](https://github.com/user-attachments/assets/1d1194d1-d068-45a9-9fce-a6e3cfff1381)
 
-# **6****Visual Results**
-**Segmentation Example:***
+# **6**Visual Results**
+# **Segmentation output:***
 
 ![image](https://github.com/user-attachments/assets/94b9b463-95d8-428f-af76-8db4a75cff29)
 
-**Classification Output:**
+# **Classification Output:**
 
 ![image](https://github.com/user-attachments/assets/e25e7884-8865-44d5-bd0e-b989854fc082)
 
