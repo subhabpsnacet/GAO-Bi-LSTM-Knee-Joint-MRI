@@ -1,4 +1,4 @@
-**Project Overview**
+**1.** **Project Overview**
 
 This repository contains the implementation of **Gaussian Aquila Optimizer-Enhanced Bidirectional LSTM (GAO-Bi-LSTM)** for accurate osteoarthritis (OA) grading in knee MRI images. The proposed model enhances deep learning-based knee joint analysis by combining:
 
@@ -13,14 +13,20 @@ Using a dataset of **16,526 knee MRI images** (sourced from Zenodo and clinical 
   Specificity: 99.35%
 The dataset and source code are publicly available for replication and validation.
 
-**Installation Instructions**
+**2.**Installation Instructions**
+
   **Step 1: Clone the Repository**
+  
   git clone https://github.com/subhabpsnacet/GAO-Bi-LSTM-Knee-Joint-MRI.git
   cd GAO-Bi-LSTM-Knee-Joint-MRI
+  
   **Step 2: Set Up a Virtual Environment (Recommended)**
+  
   python -m venv gao_env
   source gao_env/bin/activate  # On Windows: gao_env\Scripts\activate
+  
   **Step 3: Install Dependencies**
+  
   pip install -r requirements.txt
   Dependencies include:
     TensorFlow/Keras
@@ -28,21 +34,30 @@ The dataset and source code are publicly available for replication and validatio
     OpenCV (for image preprocessing)
     Scikit-learn (for evaluation metrics)
 
-**Usage Guide**
+**3.****Usage Guide**
+
   **Running the Preprocessing Pipeline**
+  
     python preprocess.py --input data/knee_mri --output processed_data
     This applies adaptive local histogram equalization and segmentation.
+    
 ***Training the GAO-Bi-LSTM Model**
+
   python train.py --epochs 30 --batch_size 24
   This trains the GAO-Bi-LSTM model using the optimized dataset.
+  
 **Testing and Evaluating the Model**
+
   python test.py --model checkpoint/GAO_Bi_LSTM.h5 --data processed_data/test
   This generates accuracy, sensitivity, and specificity reports.
 
 **Dataset Information****
-**Source: Zenodo ACL-Knee Joint MRI Dataset
-Additional Dataset: Available at GitHub
-Description:
+
+****Source:** Zenodo ACL-Knee Joint MRI Dataset
+**Additional Dataset:** Available at GitHub
+
+**Description:**
+
 16,526 MRI images
 Training Set: 13,220 images (Grades I-IV)
 Testing Set: 3,306 images
