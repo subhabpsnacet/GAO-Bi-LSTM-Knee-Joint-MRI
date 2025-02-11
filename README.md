@@ -1,4 +1,4 @@
-**1.** **Project Overview**
+# **1.** **Project Overview**
 
     This repository contains the implementation of **Gaussian Aquila Optimizer-Enhanced Bidirectional LSTM (GAO-Bi-LSTM)** for accurate osteoarthritis (OA) grading in knee MRI images. The proposed model enhances     deep learning-based knee joint analysis by combining:
 
@@ -13,7 +13,7 @@ Using a dataset of **16,526 knee MRI images** (sourced from Zenodo and clinical 
   Specificity: 99.35%
 The dataset and source code are publicly available for replication and validation.
 
-**2**.**Installation Instructions**
+# **2**.**Installation Instructions**
 
    **Step 1: Clone the Repository**
   
@@ -34,7 +34,7 @@ The dataset and source code are publicly available for replication and validatio
       OpenCV (for image preprocessing)
       Scikit-learn (for evaluation metrics)
 
-**3**.**Usage Guide****
+# **3**.**Usage Guide****
 
   **Running the Preprocessing Pipeline**
   
@@ -56,7 +56,7 @@ The dataset and source code are publicly available for replication and validatio
   
       This generates accuracy, sensitivity, and specificity reports.
 
-**4.**Dataset Information****
+# **4.**Dataset Information****
 
     *****Source:Zenodo ACL-Knee Joint MRI Dataset
     **Additional Dataset:** Available at GitHub**
@@ -69,36 +69,40 @@ The dataset and source code are publicly available for replication and validatio
         Preprocessed using adaptive histogram equalization and connected component labeling segmentation.
         If the dataset is too large to upload directly, provide Python scripts in data/ to download and preprocess it.
 
-**5. Results and Performance**
+# **5. Results and Performance**
    
 ![image](https://github.com/user-attachments/assets/1d1194d1-d068-45a9-9fce-a6e3cfff1381)
 
-**6****Visual Results
-Segmentation Example:**
+# **6****Visual Results**
+**Segmentation Example:***
+
 ![image](https://github.com/user-attachments/assets/94b9b463-95d8-428f-af76-8db4a75cff29)
 
 **Classification Output:**
+
 ![image](https://github.com/user-attachments/assets/e25e7884-8865-44d5-bd0e-b989854fc082)
+
 Predicted Grades: I, II, III, IV
 
-****7. Citation**
+# ****7. Citation**
 If you use this repository, please cite:
+
 @article{Subha2024,
+
   title={Gaussian Aquila Optimizer-Enhanced Bi-LSTM for Osteoarthritis Grading in Knee MRI},
+  
   author={Subha B and Vijay Jeyakumar},
+  
   journal={The Visual Computer},
+  
   year={2024}
 }
-7. Future Enhancements
-Expanding dataset diversity for clinical validation.
-Extending the GAO-Bi-LSTM model to multi-modal imaging (Ultrasound, X-ray).
-Enhancing interpretability via attention-based deep learning mechanisms.
-Action Items for Your GitHub Repo
-Upload all .py source files separately (avoid ZIP).
-Add a structured README.md using the above format.
-Ensure requirements.txt includes all dependencies.
-Provide sample dataset access (data/ folder or download script).
-Improve code documentation (function comments, explanations).
+
+# **8. Future Enhancements**
+    Expanding dataset diversity for clinical validation.
+    Extending the GAO-Bi-LSTM model to multi-modal imaging (Ultrasound, X-ray).
+    Enhancing interpretability via attention-based deep learning mechanisms.
+
 
 # GAO-Bi-LSTM-Knee-Joint-MRI
 This study introduces a Gaussian Aquila Optimizer (GAO)-enhanced Bidirectional Long Short-Term Memory (Bi-LSTM) network to identify and categorize OA in anterior cruciate ligament (ACL) images from knee MRI.  
