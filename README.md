@@ -1,8 +1,12 @@
 **Project Overview**
+
 This repository contains the implementation of **Gaussian Aquila Optimizer-Enhanced Bidirectional LSTM (GAO-Bi-LSTM)** for accurate osteoarthritis (OA) grading in knee MRI images. The proposed model enhances deep learning-based knee joint analysis by combining:
+
     Gaussian Aquila Optimizer (GAO) for efficient weight optimization and improved convergence.
     Bidirectional Long Short-Term Memory (Bi-LSTM) for temporal-spatial analysis of MRI sequences.
+    
 Using a dataset of **16,526 knee MRI images** (sourced from Zenodo and clinical scans), the GAO-Bi-LSTM model achieves:
+
   Segmentation Accuracy: 98.11%
   Classification Accuracy: 99.69%
   Sensitivity: 99.47%
