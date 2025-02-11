@@ -49,15 +49,15 @@ The dataset and source code are publicly available for replication and validatio
 
 "The GAO-Bi-LSTM was trained with the following parameters:
 
-o	Learning Rate: 0.001
+        Learning Rate: 0.001
 
-o	Batch Size: 32
+        Batch Size: 32
 
-o	Epochs: 50
+        Epochs: 50
 
-o	Optimizer: Gaussian Aquila Optimizer (GAO)
+        Optimizer: Gaussian Aquila Optimizer (GAO)
 
-A 70:30 train-test split was used, and validation accuracy was monitored for early stopping."
+        A 70:30 train-test split was used, and validation accuracy was monitored for early stopping."
 
 
       python train.py --epochs 50 --batch_size 32
@@ -68,11 +68,11 @@ A 70:30 train-test split was used, and validation accuracy was monitored for ear
 
 "The following metrics were calculated:
 
-o	Sensitivity and Specificity: True positive and true negative rates using a 0.5 threshold.
+        Sensitivity and Specificity: True positive and true negative rates using a 0.5 threshold.
 
-o	Accuracy: Ratio of correctly predicted samples to total samples.
+        Accuracy: Ratio of correctly predicted samples to total samples.
 
-o	Segmentation Dice Coefficient: Overlap measure between predicted and ground truth segmentations.
+        Segmentation Dice Coefficient: Overlap measure between predicted and ground truth segmentations.
 
       python test.py --model checkpoint/GAO_Bi_LSTM.h5 --data processed_data/test
       
@@ -105,11 +105,12 @@ Datas are collected from  Zenodo dataset for ACL-Knee joint MRI dataset (DOI: ht
 ![image](https://github.com/user-attachments/assets/1d1194d1-d068-45a9-9fce-a6e3cfff1381)
 
 # **6.Visual Results**
-# **Segmentation output:**
+**Segmentation output:**
 
-![image](https://github.com/user-attachments/assets/94b9b463-95d8-428f-af76-8db4a75cff29)
+![image](https://github.com/user-attachments/assets/2ce4df74-72ff-47ad-ac31-ddb1ada47591)
 
-# **Classification Output:**
+
+**Classification Output:**
 
 ![image](https://github.com/user-attachments/assets/e25e7884-8865-44d5-bd0e-b989854fc082)
 
