@@ -56,20 +56,21 @@ The dataset and source code are publicly available for replication and validatio
   
       This generates accuracy, sensitivity, and specificity reports.
 
-**Dataset Information****
+**4.**Dataset Information****
 
-****Source:** Zenodo ACL-Knee Joint MRI Dataset
-**Additional Dataset:** Available at GitHub
+    *****Source:Zenodo ACL-Knee Joint MRI Dataset
+    **Additional Dataset:** Available at GitHub**
 
-**Description:**
+    **Description:**
 
-16,526 MRI images
-Training Set: 13,220 images (Grades I-IV)
-Testing Set: 3,306 images
-Preprocessed using adaptive histogram equalization and connected component labeling segmentation.
-If the dataset is too large to upload directly, provide Python scripts in data/ to download and preprocess it.
+        16,526 MRI images
+        Training Set: 13,220 images (Grades I-IV)
+        Testing Set: 3,306 images
+        Preprocessed using adaptive histogram equalization and connected component labeling segmentation.
+        If the dataset is too large to upload directly, provide Python scripts in data/ to download and preprocess it.
 
-5. Results and Performance
+**5. Results and Performance**
+   
 Model	Accuracy	Sensitivity	Specificity
 LSTM	98.40%	98.19%	97.60%
 Bi-LSTM	97.56%	97.00%	96.69%
