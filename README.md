@@ -41,7 +41,6 @@ The dataset and source code are publicly available for replication and validatio
   Before feeding the images into the model, they were resized to 256x256 pixels, normalized to have values between 0 and 1, and augmented with rotations and flips to improve generalization
   
     python preprocess.py --input data/knee_mri --output processed_data
-    
     This applies adaptive local histogram equalization and segmentation.
 
   
@@ -50,18 +49,13 @@ The dataset and source code are publicly available for replication and validatio
 "The GAO-Bi-LSTM was trained with the following parameters:
 
         Learning Rate: 0.001
-
         Batch Size: 32
-
         Epochs: 50
-
         Optimizer: Gaussian Aquila Optimizer (GAO)
-
         A 70:30 train-test split was used, and validation accuracy was monitored for early stopping."
 
-
       python train.py --epochs 50 --batch_size 32
-      
+   
       This trains the GAO-Bi-LSTM model using the optimized dataset.
   
 **Testing and Evaluating the Model**
@@ -69,13 +63,10 @@ The dataset and source code are publicly available for replication and validatio
 "The following metrics were calculated:
 
         Sensitivity and Specificity: True positive and true negative rates using a 0.5 threshold.
-
         Accuracy: Ratio of correctly predicted samples to total samples.
-
         Segmentation Dice Coefficient: Overlap measure between predicted and ground truth segmentations.
-
       python test.py --model checkpoint/GAO_Bi_LSTM.h5 --data processed_data/test
-      
+    
       This generates accuracy, sensitivity, and specificity reports.
 
 # **4.**Dataset Information****
@@ -122,11 +113,8 @@ If you use this repository, please cite:
 @article{Subha2024,
 
   title={Gaussian Aquila Optimizer-Enhanced Bi-LSTM for Osteoarthritis Grading in Knee MRI},
-  
   author={Subha B and Vijay Jeyakumar},
-  
   journal={The Visual Computer},
-  
   year={2024}
 }
 
