@@ -13,7 +13,7 @@ Using a dataset of **16,526 knee MRI images** (sourced from Zenodo and clinical 
   Specificity: 99.35%
 The dataset and source code are publicly available for replication and validation.
 
-**2.**Installation Instructions**
+**2**.**Installation Instructions**
 
   **Step 1: Clone the Repository**
   
@@ -39,16 +39,19 @@ The dataset and source code are publicly available for replication and validatio
   **Running the Preprocessing Pipeline**
   
     python preprocess.py --input data/knee_mri --output processed_data
+    
     This applies adaptive local histogram equalization and segmentation.
     
 ***Training the GAO-Bi-LSTM Model**
 
   python train.py --epochs 30 --batch_size 24
+  
   This trains the GAO-Bi-LSTM model using the optimized dataset.
   
 **Testing and Evaluating the Model**
 
   python test.py --model checkpoint/GAO_Bi_LSTM.h5 --data processed_data/test
+  
   This generates accuracy, sensitivity, and specificity reports.
 
 **Dataset Information****
