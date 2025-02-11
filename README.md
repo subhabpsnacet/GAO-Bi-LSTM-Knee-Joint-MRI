@@ -1,61 +1,42 @@
-1. Project Overview
-This repository contains the implementation of Gaussian Aquila Optimizer-Enhanced Bidirectional LSTM (GAO-Bi-LSTM) for accurate osteoarthritis (OA) grading in knee MRI images. The proposed model enhances deep learning-based knee joint analysis by combining:
-
-Gaussian Aquila Optimizer (GAO) for efficient weight optimization and improved convergence.
-Bidirectional Long Short-Term Memory (Bi-LSTM) for temporal-spatial analysis of MRI sequences.
-Using a dataset of 16,526 knee MRI images (sourced from Zenodo and clinical scans), the GAO-Bi-LSTM model achieves:
-
-Segmentation Accuracy: 98.11%
-Classification Accuracy: 99.69%
-Sensitivity: 99.47%
-Specificity: 99.35%
+**Project Overview**
+This repository contains the implementation of **Gaussian Aquila Optimizer-Enhanced Bidirectional LSTM (GAO-Bi-LSTM)** for accurate osteoarthritis (OA) grading in knee MRI images. The proposed model enhances deep learning-based knee joint analysis by combining:
+    Gaussian Aquila Optimizer (GAO) for efficient weight optimization and improved convergence.
+    Bidirectional Long Short-Term Memory (Bi-LSTM) for temporal-spatial analysis of MRI sequences.
+Using a dataset of **16,526 knee MRI images** (sourced from Zenodo and clinical scans), the GAO-Bi-LSTM model achieves:
+  Segmentation Accuracy: 98.11%
+  Classification Accuracy: 99.69%
+  Sensitivity: 99.47%
+  Specificity: 99.35%
 The dataset and source code are publicly available for replication and validation.
 
-2. Installation Instructions
-Step 1: Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/subhabpsnacet/GAO-Bi-LSTM-Knee-Joint-MRI.git
-cd GAO-Bi-LSTM-Knee-Joint-MRI
-Step 2: Set Up a Virtual Environment (Recommended)
-bash
-Copy
-Edit
-python -m venv gao_env
-source gao_env/bin/activate  # On Windows: gao_env\Scripts\activate
-Step 3: Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Dependencies include:
+**Installation Instructions**
+  **Step 1: Clone the Repository**
+  git clone https://github.com/subhabpsnacet/GAO-Bi-LSTM-Knee-Joint-MRI.git
+  cd GAO-Bi-LSTM-Knee-Joint-MRI
+  **Step 2: Set Up a Virtual Environment (Recommended)**
+  python -m venv gao_env
+  source gao_env/bin/activate  # On Windows: gao_env\Scripts\activate
+  **Step 3: Install Dependencies**
+  pip install -r requirements.txt
+  Dependencies include:
+    TensorFlow/Keras
+    NumPy, Pandas, Matplotlib
+    OpenCV (for image preprocessing)
+    Scikit-learn (for evaluation metrics)
 
-TensorFlow/Keras
-NumPy, Pandas, Matplotlib
-OpenCV (for image preprocessing)
-Scikit-learn (for evaluation metrics)
-3. Usage Guide
-Running the Preprocessing Pipeline
-bash
-Copy
-Edit
-python preprocess.py --input data/knee_mri --output processed_data
-This applies adaptive local histogram equalization and segmentation.
-Training the GAO-Bi-LSTM Model
-bash
-Copy
-Edit
-python train.py --epochs 30 --batch_size 24
-This trains the GAO-Bi-LSTM model using the optimized dataset.
-Testing and Evaluating the Model
-bash
-Copy
-Edit
-python test.py --model checkpoint/GAO_Bi_LSTM.h5 --data processed_data/test
-This generates accuracy, sensitivity, and specificity reports.
-4. Dataset Information
-Source: Zenodo ACL-Knee Joint MRI Dataset
+**Usage Guide**
+  **Running the Preprocessing Pipeline**
+    python preprocess.py --input data/knee_mri --output processed_data
+    This applies adaptive local histogram equalization and segmentation.
+***Training the GAO-Bi-LSTM Model**
+  python train.py --epochs 30 --batch_size 24
+  This trains the GAO-Bi-LSTM model using the optimized dataset.
+**Testing and Evaluating the Model**
+  python test.py --model checkpoint/GAO_Bi_LSTM.h5 --data processed_data/test
+  This generates accuracy, sensitivity, and specificity reports.
+
+**Dataset Information****
+**Source: Zenodo ACL-Knee Joint MRI Dataset
 Additional Dataset: Available at GitHub
 Description:
 16,526 MRI images
