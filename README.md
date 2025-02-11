@@ -37,23 +37,45 @@ The dataset and source code are publicly available for replication and validatio
 # **3**.**Usage Guide**
 
   **Running the Preprocessing Pipeline**
+
+  Before feeding the images into the model, they were resized to 256x256 pixels, normalized to have values between 0 and 1, and augmented with rotations and flips to improve generalization
   
     python preprocess.py --input data/knee_mri --output processed_data
     
     This applies adaptive local histogram equalization and segmentation.
-    
+
+  
 ***Training the GAO-Bi-LSTM Model**
 
-      python train.py --epochs 30 --batch_size 24
+"The GAO-Bi-LSTM was trained with the following parameters:
+
+o	Learning Rate: 0.001
+
+o	Batch Size: 32
+
+o	Epochs: 50
+
+o	Optimizer: Gaussian Aquila Optimizer (GAO)
+
+A 70:30 train-test split was used, and validation accuracy was monitored for early stopping."
+
+
+      python train.py --epochs 50 --batch_size 32
       
-  
       This trains the GAO-Bi-LSTM model using the optimized dataset.
   
 **Testing and Evaluating the Model**
 
+"The following metrics were calculated:
+
+o	Sensitivity and Specificity: True positive and true negative rates using a 0.5 threshold.
+
+o	Accuracy: Ratio of correctly predicted samples to total samples.
+
+o	Segmentation Dice Coefficient: Overlap measure between predicted and ground truth segmentations.
+
       python test.py --model checkpoint/GAO_Bi_LSTM.h5 --data processed_data/test
       
-  
       This generates accuracy, sensitivity, and specificity reports.
 
 # **4.**Dataset Information****
@@ -82,7 +104,7 @@ Datas are collected from  Zenodo dataset for ACL-Knee joint MRI dataset (DOI: ht
    
 ![image](https://github.com/user-attachments/assets/1d1194d1-d068-45a9-9fce-a6e3cfff1381)
 
-# **6.**Visual Results**
+# **6.Visual Results**
 # **Segmentation output:**
 
 ![image](https://github.com/user-attachments/assets/94b9b463-95d8-428f-af76-8db4a75cff29)
@@ -93,7 +115,7 @@ Datas are collected from  Zenodo dataset for ACL-Knee joint MRI dataset (DOI: ht
 
 Predicted Grades: I, II, III, IV
 
-# ****7. Citation**
+# **7. Citation**
 If you use this repository, please cite:
 
 @article{Subha2024,
@@ -111,30 +133,3 @@ If you use this repository, please cite:
     Expanding dataset diversity for clinical validation.
     Extending the GAO-Bi-LSTM model to multi-modal imaging (Ultrasound, X-ray).
     Enhancing interpretability via attention-based deep learning mechanisms.
-
-
-
-
-
-
-
-Preprocessing Guidelines
-•	Preprocessing Steps:
-"Before feeding the images into the model, they were resized to 256x256 pixels, normalized to have values between 0 and 1, and augmented with rotations and flips to improve generalization."
-
-Model Training Guidelines
-•	Model Training Settings:
-"The GAO-Bi-LSTM was trained with the following parameters:
-o	Learning Rate: 0.001
-o	Batch Size: 32
-o	Epochs: 50
-o	Optimizer: Gaussian Aquila Optimizer (GAO)
-
-A 70:30 train-test split was used, and validation accuracy was monitored for early stopping."
-
-Metrics Calculation Guidelines
-•	Evaluation Metrics:
-"The following metrics were calculated:
-o	Sensitivity and Specificity: True positive and true negative rates using a 0.5 threshold.
-o	Accuracy: Ratio of correctly predicted samples to total samples.
-o	Segmentation Dice Coefficient: Overlap measure between predicted and ground truth segmentations.
