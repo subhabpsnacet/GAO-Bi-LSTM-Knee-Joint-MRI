@@ -73,21 +73,16 @@ The dataset and source code are publicly available for replication and validatio
    
 ![image](https://github.com/user-attachments/assets/1d1194d1-d068-45a9-9fce-a6e3cfff1381)
 
-Visual Results
-Segmentation Example:
+**6****Visual Results
+Segmentation Example:**
+![image](https://github.com/user-attachments/assets/94b9b463-95d8-428f-af76-8db4a75cff29)
 
-Before: Raw Knee MRI Image
-After: Processed Image with ACL Region Highlighted
-Classification Output:
-
+**Classification Output:**
+![image](https://github.com/user-attachments/assets/e25e7884-8865-44d5-bd0e-b989854fc082)
 Predicted Grades: I, II, III, IV
-Example Confusion Matrix & ROC Curve
-6. Citation
-If you use this repository, please cite:
 
-bibtex
-Copy
-Edit
+****7. Citation**
+If you use this repository, please cite:
 @article{Subha2024,
   title={Gaussian Aquila Optimizer-Enhanced Bi-LSTM for Osteoarthritis Grading in Knee MRI},
   author={Subha B and Vijay Jeyakumar},
