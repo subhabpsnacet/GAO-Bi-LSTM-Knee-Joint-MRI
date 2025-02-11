@@ -1,6 +1,6 @@
 **1.** **Project Overview**
 
-This repository contains the implementation of **Gaussian Aquila Optimizer-Enhanced Bidirectional LSTM (GAO-Bi-LSTM)** for accurate osteoarthritis (OA) grading in knee MRI images. The proposed model enhances deep learning-based knee joint analysis by combining:
+    This repository contains the implementation of **Gaussian Aquila Optimizer-Enhanced Bidirectional LSTM (GAO-Bi-LSTM)** for accurate osteoarthritis (OA) grading in knee MRI images. The proposed model enhances     deep learning-based knee joint analysis by combining:
 
     Gaussian Aquila Optimizer (GAO) for efficient weight optimization and improved convergence.
     Bidirectional Long Short-Term Memory (Bi-LSTM) for temporal-spatial analysis of MRI sequences.
@@ -15,26 +15,26 @@ The dataset and source code are publicly available for replication and validatio
 
 **2**.**Installation Instructions**
 
-  **Step 1: Clone the Repository**
+   **Step 1: Clone the Repository**
   
-  git clone https://github.com/subhabpsnacet/GAO-Bi-LSTM-Knee-Joint-MRI.git
-  cd GAO-Bi-LSTM-Knee-Joint-MRI
+      git clone https://github.com/subhabpsnacet/GAO-Bi-LSTM-Knee-Joint-MRI.git
+      cd GAO-Bi-LSTM-Knee-Joint-MRI
   
   **Step 2: Set Up a Virtual Environment (Recommended)**
   
-  python -m venv gao_env
-  source gao_env/bin/activate  # On Windows: gao_env\Scripts\activate
+      python -m venv gao_env
+      source gao_env/bin/activate  # On Windows: gao_env\Scripts\activate
   
   **Step 3: Install Dependencies**
   
-  pip install -r requirements.txt
-  Dependencies include:
-    TensorFlow/Keras
-    NumPy, Pandas, Matplotlib
-    OpenCV (for image preprocessing)
-    Scikit-learn (for evaluation metrics)
+      pip install -r requirements.txt
+      Dependencies include:
+      TensorFlow/Keras
+      NumPy, Pandas, Matplotlib
+      OpenCV (for image preprocessing)
+      Scikit-learn (for evaluation metrics)
 
-**3.****Usage Guide**
+**3**.**Usage Guide****
 
   **Running the Preprocessing Pipeline**
   
