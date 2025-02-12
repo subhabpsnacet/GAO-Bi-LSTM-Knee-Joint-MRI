@@ -18,3 +18,5 @@ pip install -r requirements.txt
 Verify the Python version used for your project (e.g., Python 3.8+)
 
 If using GPU acceleration, ensure TensorFlow supports CUDA (tensorflow-gpu).
+
+The simulation process was executed using 64GB RAM along with the NVIDIA GeForce RTX 2080 Ti on a  CUDA platform using the Python environment. 
