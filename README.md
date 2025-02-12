@@ -118,7 +118,31 @@ If you use this repository, please cite:
   year={2024}
 }
 
-# **8. Future Enhancements**
+# **8. Requirements
+tensorflow==2.14.0
+keras==2.14.0
+numpy==1.24.3
+pandas==1.5.3
+matplotlib==3.7.2
+scikit-learn==1.3.0
+opencv-python==4.8.0.76
+scipy==1.10.1
+seaborn==0.12.2
+h5py==3.10.0
+albumentations==1.3.1
+
+Installation Instructions
+
+pip install -r requirements.txt
+
+
+Verify the Python version used for your project (e.g., Python 3.8+)
+
+If using GPU acceleration, ensure TensorFlow supports CUDA (tensorflow-gpu).
+
+The simulation process was executed using 64GB RAM along with the NVIDIA GeForce RTX 2080 Ti on a  CUDA platform using the Python environment. 
+
+# **9. Future Enhancements**
     Expanding dataset diversity for clinical validation.
     Extending the GAO-Bi-LSTM model to multi-modal imaging (Ultrasound, X-ray).
     Enhancing interpretability via attention-based deep learning mechanisms.
