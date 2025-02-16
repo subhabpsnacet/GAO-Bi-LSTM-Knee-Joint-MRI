@@ -1,3 +1,10 @@
+## Citation  
+If you use this code or dataset in your research, please cite:  
+
+**[Gaussian Aquila Optimizer-Enhanced Bi-LSTM for Osteoarthritis Grading in Knee MRI]**  
+[Subha B and Vijay Jeyakumar]  
+*The Visual Computer*, [2025].  
+
 # **1.** **Project Overview**
 
     This repository contains the implementation of **Gaussian Aquila Optimizer-Enhanced Bidirectional LSTM (GAO-Bi-LSTM)** for accurate osteoarthritis (OA) grading in knee MRI images. The proposed model enhances     deep learning-based knee joint analysis by combining:
@@ -107,25 +114,8 @@ Datas are collected from  Zenodo dataset for ACL-Knee joint MRI dataset (DOI: ht
 
 Predicted Grades: I, II, III, IV
 
-# **7. Citation**
-If you use this code or dataset in your research, please cite:
-
-@article{Subha2024,
-
-  title={Gaussian Aquila Optimizer-Enhanced Bi-LSTM for Osteoarthritis Grading in Knee MRI},
-  author={Subha B and Vijay Jeyakumar},
-  journal={The Visual Computer},
-  year={2024}
-}
-## Citation  
-If you use this code or dataset in your research, please cite:  
-
-**[Your Paper Title]**  
-[Your Name(s)]  
-*The Visual Computer*, [Year].  
-DOI: [Your DOI link]  
-
-# 8. Requirements
+  
+# 7. Requirements
 tensorflow==2.14.0
 
 keras==2.14.0
@@ -159,7 +149,7 @@ If using GPU acceleration, ensure TensorFlow supports CUDA (tensorflow-gpu).
 
 The simulation process was executed using 64GB RAM along with the NVIDIA GeForce RTX 2080 Ti on a  CUDA platform using the Python environment. 
 
-# **9. Future Enhancements**
+# **8. Future Enhancements**
     Expanding dataset diversity for clinical validation.
     Extending the GAO-Bi-LSTM model to multi-modal imaging (Ultrasound, X-ray).
     Enhancing interpretability via attention-based deep learning mechanisms.
