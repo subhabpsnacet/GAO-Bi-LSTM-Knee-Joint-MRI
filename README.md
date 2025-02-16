@@ -1,9 +1,9 @@
 ## Citation  
 If you use this code or dataset in your research, please cite:  
 
-**[Gaussian Aquila Optimizer-Enhanced Bi-LSTM for Osteoarthritis Grading in Knee MRI]**  
-[Subha B and Vijay Jeyakumar]  
-*The Visual Computer*, [2025].  
+**Gaussian Aquila Optimizer-Enhanced Bi-LSTM for Osteoarthritis Grading in Knee MRI**  
+Subha B and Vijay Jeyakumar  
+*The Visual Computer*, 2025.  
 
 # **1.** **Project Overview**
 
