@@ -108,7 +108,7 @@ Datas are collected from  Zenodo dataset for ACL-Knee joint MRI dataset (DOI: ht
 Predicted Grades: I, II, III, IV
 
 # **7. Citation**
-If you use this repository, please cite:
+If you use this code or dataset in your research, please cite:
 
 @article{Subha2024,
 
@@ -117,6 +117,13 @@ If you use this repository, please cite:
   journal={The Visual Computer},
   year={2024}
 }
+## Citation  
+If you use this code or dataset in your research, please cite:  
+
+**[Your Paper Title]**  
+[Your Name(s)]  
+*The Visual Computer*, [Year].  
+DOI: [Your DOI link]  
 
 # 8. Requirements
 tensorflow==2.14.0
