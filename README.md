@@ -1,4 +1,4 @@
-## Citation  
+## **Citation**  
 If you use this code or dataset in your research, please cite:  
 
 **Gaussian Aquila Optimizer-Enhanced Bi-LSTM for Osteoarthritis Grading in Knee MRI**  
